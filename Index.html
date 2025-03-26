@@ -1,57 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Portfolio</title>
-    </head>
-
-    <body>
-        <header>
-            <h1>Portfolio Emanuel Longhi Ingeniero en sistemas de informacion</h1>
-        </header>
-        
-        <article>
-            <p>Bienvenido, esta pagina recopilacion de mis datos y logros como profecional </p>
-        </article>
-        
-        <aside>
-            <img src="Imagenes/Sapo.jpg" alt="Foto">
-        </aside>
-
-        <section>
-            <h2>Habilidades</h2>
-            <ol>
-                <li>uno</li>
-                <li>dos</li>
-            </ol>
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Emanuel Longhi - Ingeniero en Sistemas de Información</h1>
+        <button id="modoNocturno">Modo Nocturno</button>
+    </header>
+    
+    <main>
+        <div class="columna-izq">
+            <article>
+                <p>
+                    Bienvenido, soy Emanuel, Soy un ingeniero en sistemas con interés en el diseño y desarrollo de soluciones tecnológicas eficientes. Me motiva resolver problemas complejos y mejorar procesos mediante el uso de tecnología. Disfruto aprender nuevas herramientas y metodologías para optimizar el rendimiento y la escalabilidad de los sistemas. Busco aportar valor con mi trabajo y seguir creciendo en el campo de la ingeniería de software.
+                </p>
+            </article>
             
-            <h3>Experiencias</h3>
-            <ol>
-                <li>uno</li>
-                <li>dos</li>
-            </ol>
+            <section class="experiencias">
+                <h3>Experiencias</h3>
+                <ol>
+                    <li>Desarrollador de Software</li>
+                    <li>Administrador de Sistemas</li>
+                    <li>Analista de Datos</li>
+                    <li>Arquitecto de Software</li>
+                    <li>Soporte Técnico</li>
+                </ol>
+                <h3>Proyectos</h3>
+                <ul>
+                    <li>Plataforma de Monitoreo de Servidores en la Nube: Sistema que permite monitorear en tiempo real el rendimiento de servidores en la nube, detectando anomalías en CPU, RAM y tráfico de red.</li>
+                    <li>Aplicación de Gestión de Inventario para Pequeñas Empresas: Sistema que permite a negocios pequeños administrar su stock, realizar pedidos a proveedores y generar reportes de ventas.</li>
+                    <li>Chatbot de Atención al Cliente con IA: Chatbot basado en inteligencia artificial que responde preguntas frecuentes y gestiona solicitudes de clientes.</li>
+                </ul>
+            </section>
+        </div>
         
-            <h3>Proyectos</h3>
-            <ul>
-                <li>P1</li>
-                <li>P2</li>
-            </ul>
-        </section>
-
-        <footer>
-            <h4>Mis redes</h4>
+        <div class="columna-der">
+            <aside class="foto">
+                <img src="Imagenes/Perfil.webp" alt="Foto">
+            </aside>
+            <section class="habilidades">
+                <h2>Habilidades</h2>
+                <ol>
+                    <li>Programación en varios lenguajes (Python, Java, C++)</li>
+                    <li>Conocimientos en redes y protocolos de comunicación</li>
+                    <li>Seguridad informática y protección de datos</li>
+                    <li>Adaptabilidad a nuevas tecnologías</li>
+                    <li>Resolución de problemas y pensamiento analítico</li>    
+                </ol>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <h4>Mis Redes</h4>
+        <div class="redes">
             <a href="https://ar.linkedin.com/" target="_blank">Linkedin</a>
             <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        </div>
+        <form method="post" action="">
+            <label for="Nombre">Nombre:</label>
+            <input name="Nombre" id="Nombre" placeholder="name" required>
 
-            <form method="post" action="">
-                <label for="Nombre">Nombre:</label>
-                <input name="Nombre" id="Nombre" placeholder="name" required>
+            <label for="Apellido">Apellido:</label>
+            <input name="Apellido" id="Apellido" placeholder="apellido" required>
 
-                <label for="Apellido">Apellido:</label>
-                <input name="Apellido" id="Apellido" placeholder="apellido" required>
+            <input type="submit" value="Enviar">
+        </form>
+    </footer>
 
-                <input type="submit" value="Enviar">
-            </form>
-        </footer>
-
-    </body>
+    <script>
+        document.getElementById("modoNocturno").addEventListener("click", function () {
+            document.body.classList.toggle("modo-oscuro");
+        });
+    </script>
+</body>
 </html>

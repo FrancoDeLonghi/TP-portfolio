@@ -1,0 +1,134 @@
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #20c67a;
+    color: #27667B;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: #DDEB9D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+ul{
+    padding-left: 2rem;
+    list-style-type: circle;
+}
+
+ol{
+    padding-left: 2rem;
+    list-style-type: circle
+}
+
+.columna-izq, .columna-der {
+    flex: 1;
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+    background: #DDEB9D;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.columna-izq ol li, 
+.columna-izq ul li {
+    margin-bottom: 10px; 
+}
+
+.foto img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background: #DDEB9D;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#modoNocturno {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#modoNocturno:hover {
+    background-color: #555;
+}
+
+body.modo-oscuro {
+    background: #1a1a1a;
+    color: #dcdcdc;
+}
+
+body.modo-oscuro header,
+body.modo-oscuro footer {
+    background: #333;
+    color: #fff;
+}
+
+body.modo-oscuro #modoNocturno {
+    background-color: #ddd;
+    color: #000;
+}
+
+body.modo-oscuro #modoNocturno:hover {
+    background-color: #bbb;
+}
+
+body.modo-oscuro .columna-izq,
+body.modo-oscuro .columna-der {
+    background: #222;
+    color: #dcdcdc;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    .columna-izq,
+    .columna-der {
+        width: 100%;
+    }
+}
+
+/* Subrayado de los títulos */
+h3, h2 {
+    text-decoration: underline;
+}
+
+
